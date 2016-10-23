@@ -15,6 +15,8 @@ class IntroViewController: UIViewController {
 	@IBOutlet weak var nextButton: UIButton!
 	@IBOutlet weak var pageController: UIPageControl!
 	
+	let store = UserDefaults.standard
+	
 	override func viewDidLoad() {
 		super.viewDidLoad()
 	}
@@ -27,6 +29,8 @@ class IntroViewController: UIViewController {
 	}
 
 	@IBAction func skipIntro(_ sender: AnyObject) {
-		dismiss(animated: true, completion: nil)
+		dismiss(animated: true, completion: {
+			self.store.set(true, forKey: "intro")
+		})
 	}
 }

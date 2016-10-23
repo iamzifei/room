@@ -28,6 +28,7 @@
 		E9592A721DBB1E4900ACF465 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9592A711DBB1E4900ACF465 /* ProfileViewController.swift */; };
 		E9592A741DBB1F7800ACF465 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9592A731DBB1F7800ACF465 /* ProfileTableViewController.swift */; };
 		E965A4741DBB754C0058FB7F /* ListingDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E965A4731DBB754C0058FB7F /* ListingDetailTableViewController.swift */; };
+		E9C62CE71DBCC53A00663FA7 /* IntroCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C62CE61DBCC53A00663FA7 /* IntroCollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		E9592A731DBB1F7800ACF465 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProfileTableViewController.swift; path = Controller/Profile/ProfileTableViewController.swift; sourceTree = "<group>"; };
 		E9658F951DBC7B3E00D5136A /* NibView.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NibView.framework; path = "../../../Library/Developer/Xcode/DerivedData/room-bfturojzugxhixgrbhcfpqufxpzh/Build/Products/Debug-iphonesimulator/NibView/NibView.framework"; sourceTree = "<group>"; };
 		E965A4731DBB754C0058FB7F /* ListingDetailTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ListingDetailTableViewController.swift; path = Controller/Listing/ListingDetailTableViewController.swift; sourceTree = "<group>"; };
+		E9C62CE61DBCC53A00663FA7 /* IntroCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IntroCollectionViewController.swift; path = Controller/Intro/IntroCollectionViewController.swift; sourceTree = "<group>"; };
 		EEE6E5E42C3C1016EF011FDC /* Pods_room.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_room.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -117,6 +119,7 @@
 				E94E9EB81DBC901400BEB5AE /* IntroView.xib */,
 				E94E9EBA1DBCA47B00BEB5AE /* IntroView.swift */,
 				E94E9EB61DBC8E0100BEB5AE /* IntroViewController.swift */,
+				E9C62CE61DBCC53A00663FA7 /* IntroCollectionViewController.swift */,
 			);
 			name = Intro;
 			sourceTree = "<group>";
@@ -338,6 +341,7 @@
 				E94B8C381DBC71030074A142 /* featureView.swift in Sources */,
 				E94E9EB71DBC8E0100BEB5AE /* IntroViewController.swift in Sources */,
 				E9592A661DBAFFF000ACF465 /* ListingTableViewCell.swift in Sources */,
+				E9C62CE71DBCC53A00663FA7 /* IntroCollectionViewController.swift in Sources */,
 				E965A4741DBB754C0058FB7F /* ListingDetailTableViewController.swift in Sources */,
 				E9592A6D1DBB0BFC00ACF465 /* FavouriteViewController.swift in Sources */,
 				E94E9EBB1DBCA47B00BEB5AE /* IntroView.swift in Sources */,
@@ -395,6 +399,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -446,6 +451,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;

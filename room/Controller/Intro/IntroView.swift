@@ -20,7 +20,9 @@ class IntroView: NibDesignable {
 			return titleLabel.text
 		}
 		set {
-			titleLabel.text = newValue
+			if let word = newValue{
+				titleLabel.text = NSLocalizedString(word, comment: "")
+			}
 		}
 	}
 	
@@ -29,7 +31,10 @@ class IntroView: NibDesignable {
 			return subtitleLabel.text
 		}
 		set {
-			subtitleLabel.text = newValue
+			if let word = newValue{
+				subtitleLabel.text = NSLocalizedString(word, comment: "")
+			}
+			
 		}
 	}
 	

@@ -33,3 +33,14 @@
 "feedback" = "Feedback";
 "support" = "Supports";
 "logout" = "Log Out";
+
+
+// intro View
+"introListingTitle" = "最新房源，一手掌握";
+"introListingSubtitle" = "关键信息，一览无余";
+
+"introSearchTitle" = "强大搜索，精确定位";
+"introSearchSubitle" = "各种搜索条件，帮助您快速定位心中理想的房源";
+
+"introWechatTitle" = "微信分享，方便快捷";
+"introWechatSubtitle" = "自动合并多图，复制房源详情，秒发朋友圈";

@@ -15,7 +15,7 @@ class ListingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-//		isFirstTimeUser()
+		isFirstTimeUser()
     }
 	
 	override func viewWillAppear(_ animated: Bool) {
@@ -35,11 +35,9 @@ class ListingViewController: UIViewController {
 extension ListingViewController{
 	func isFirstTimeUser() {
 		if !store.bool(forKey: "intro"){
-			let storyboard = UIStoryboard.init(name: "Into", bundle: nil)
+			let storyboard = UIStoryboard.init(name: "Intro", bundle: nil)
 			let vc = storyboard.instantiateViewController(withIdentifier: "IntroViewController")
-			present(vc, animated: true, completion: {
-				self.store.set(true, forKey: "intro")
-			})
+			present(vc, animated: true, completion: nil)
 		}
 	}
 }

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ssc-ZC-pHz">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,10 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="h4t-4c-pxI"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Lrh-N2-5yi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kzf-8C-77v">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="smv-L1-Jzr" kind="embed" id="4AI-E0-sLc"/>
                                 </connections>
@@ -80,10 +80,10 @@
             </objects>
             <point key="canvasLocation" x="-526" y="24"/>
         </scene>
-        <!--View Controller-->
+        <!--Intro Collection View Controller-->
         <scene sceneID="FL0-4f-25y">
             <objects>
-                <viewController id="smv-L1-Jzr" sceneMemberID="viewController">
+                <viewController id="smv-L1-Jzr" customClass="IntroCollectionViewController" customModule="room" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="277-ui-7vf"/>
                         <viewControllerLayoutGuide type="bottom" id="5yC-I8-MbY"/>
@@ -95,6 +95,7 @@
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q75-8w-wca">
                                 <frame key="frameInset" width="1150" height="594"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aYC-lA-at1">
                                     <size key="itemSize" width="375" height="594"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -110,15 +111,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBH-jv-bVq" customClass="IntroView" customModule="room" customModuleProvider="target">
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="最新房源，一手掌握"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="关键信息，一览无余"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="introListingTitle"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="introListingSubtitle"/>
                                                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="placeholder"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                             </subviews>
                                         </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="ZBH-jv-bVq" firstAttribute="leading" secondItem="wYG-bu-TDJ" secondAttribute="leadingMargin" id="K5Q-cY-NVb"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="ZBH-jv-bVq" secondAttribute="bottom" id="R2g-Px-AOM"/>
@@ -136,8 +138,8 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8u-0J-hTk" customClass="IntroView" customModule="room" customModuleProvider="target">
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="强大搜索，精确定位"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="各种搜索条件，帮助您快速定位心中理想的房源"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="introSearchTitle"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="introSearchSubtile"/>
                                                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="placeholder"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -160,8 +162,8 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9C-If-NgL" customClass="IntroView" customModule="room" customModuleProvider="target">
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="最新房源，一手掌握"/>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="关键信息，一览无余"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="introWechatTitle"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="introWechatSubtitle"/>
                                                         <userDefinedRuntimeAttribute type="image" keyPath="image" value="placeholder"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
@@ -175,9 +177,14 @@
                                         </constraints>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="smv-L1-Jzr" id="Wdo-qi-cie"/>
+                                    <outlet property="delegate" destination="smv-L1-Jzr" id="rgG-MC-lh9"/>
+                                    <outlet property="prefetchDataSource" destination="smv-L1-Jzr" id="p4u-zE-0w0"/>
+                                </connections>
                             </collectionView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="1150" height="594"/>
