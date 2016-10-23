@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ssc-ZC-pHz">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Intro View Controller-->
+        <scene sceneID="a9v-2u-zgM">
+            <objects>
+                <viewController storyboardIdentifier="IntroViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ssc-ZC-pHz" customClass="IntroViewController" customModule="room" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="P9e-DZ-iYA"/>
+                        <viewControllerLayoutGuide type="bottom" id="h4t-4c-pxI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lrh-N2-5yi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kzf-8C-77v">
+                                <connections>
+                                    <segue destination="smv-L1-Jzr" kind="embed" id="4AI-E0-sLc"/>
+                                </connections>
+                            </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="rBH-JF-qMy"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqT-NQ-xl2">
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="&gt;">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="nextPage:" destination="ssc-ZC-pHz" eventType="touchUpInside" id="g5o-E5-dBE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hrK-1e-XyS">
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="&lt;">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="prevPage:" destination="ssc-ZC-pHz" eventType="touchUpInside" id="qzg-Dh-zGo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pn2-aX-0sv">
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="skipIntro:" destination="ssc-ZC-pHz" eventType="touchUpInside" id="OgV-hh-mYd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.64691417780000005" blue="0.037396845079999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="hrK-1e-XyS" firstAttribute="centerY" secondItem="Lrh-N2-5yi" secondAttribute="centerY" id="69n-1n-dVE"/>
+                            <constraint firstItem="Kzf-8C-77v" firstAttribute="leading" secondItem="Lrh-N2-5yi" secondAttribute="leading" id="Cgb-sZ-lcx"/>
+                            <constraint firstItem="IqT-NQ-xl2" firstAttribute="centerY" secondItem="Lrh-N2-5yi" secondAttribute="centerY" id="GIg-9q-BnW"/>
+                            <constraint firstAttribute="trailing" secondItem="Kzf-8C-77v" secondAttribute="trailing" id="H8D-mb-db6"/>
+                            <constraint firstItem="Kzf-8C-77v" firstAttribute="top" secondItem="P9e-DZ-iYA" secondAttribute="bottom" id="NPc-Ol-pPn"/>
+                            <constraint firstItem="hrK-1e-XyS" firstAttribute="leading" secondItem="Lrh-N2-5yi" secondAttribute="leadingMargin" id="PNB-iS-h3a"/>
+                            <constraint firstItem="IqT-NQ-xl2" firstAttribute="trailing" secondItem="Lrh-N2-5yi" secondAttribute="trailingMargin" id="R4o-Ay-Ctm"/>
+                            <constraint firstItem="pn2-aX-0sv" firstAttribute="trailing" secondItem="Lrh-N2-5yi" secondAttribute="trailingMargin" id="b88-U9-apH"/>
+                            <constraint firstItem="rBH-JF-qMy" firstAttribute="centerX" secondItem="Lrh-N2-5yi" secondAttribute="centerX" id="kgb-b1-gzK"/>
+                            <constraint firstItem="h4t-4c-pxI" firstAttribute="top" secondItem="pn2-aX-0sv" secondAttribute="bottom" constant="8" id="leq-G9-Tfz"/>
+                            <constraint firstItem="h4t-4c-pxI" firstAttribute="top" secondItem="rBH-JF-qMy" secondAttribute="bottom" constant="8" id="r7H-fd-ROc"/>
+                            <constraint firstItem="rBH-JF-qMy" firstAttribute="top" secondItem="Kzf-8C-77v" secondAttribute="bottom" constant="8" id="sre-Fu-PsP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nextButton" destination="IqT-NQ-xl2" id="Xxk-n3-Rwo"/>
+                        <outlet property="pageController" destination="rBH-JF-qMy" id="pnM-1Q-6p7"/>
+                        <outlet property="prevButton" destination="hrK-1e-XyS" id="59P-eu-Odm"/>
+                        <outlet property="skipButton" destination="pn2-aX-0sv" id="wG6-25-one"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bNX-Xh-DUJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-526" y="24"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FL0-4f-25y">
+            <objects>
+                <viewController id="smv-L1-Jzr" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="277-ui-7vf"/>
+                        <viewControllerLayoutGuide type="bottom" id="5yC-I8-MbY"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i6X-Ln-Lxj">
+                        <rect key="frame" x="0.0" y="0.0" width="1150" height="594"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" pagingEnabled="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="q75-8w-wca">
+                                <frame key="frameInset" width="1150" height="594"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aYC-lA-at1">
+                                    <size key="itemSize" width="375" height="594"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="intro1" id="wYG-bu-TDJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZBH-jv-bVq" customClass="IntroView" customModule="room" customModuleProvider="target">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="最新房源，一手掌握"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="关键信息，一览无余"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="placeholder"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="ZBH-jv-bVq" firstAttribute="leading" secondItem="wYG-bu-TDJ" secondAttribute="leadingMargin" id="K5Q-cY-NVb"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="ZBH-jv-bVq" secondAttribute="bottom" id="R2g-Px-AOM"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="ZBH-jv-bVq" secondAttribute="trailing" id="cuQ-2E-TOq"/>
+                                            <constraint firstItem="ZBH-jv-bVq" firstAttribute="top" secondItem="wYG-bu-TDJ" secondAttribute="topMargin" id="z2x-Od-JuN"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="intro2" id="vFD-P4-EFJ">
+                                        <rect key="frame" x="385" y="0.0" width="375" height="594"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i8u-0J-hTk" customClass="IntroView" customModule="room" customModuleProvider="target">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="强大搜索，精确定位"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="各种搜索条件，帮助您快速定位心中理想的房源"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="placeholder"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="trailingMargin" secondItem="i8u-0J-hTk" secondAttribute="trailing" id="83s-e1-OJN"/>
+                                            <constraint firstItem="i8u-0J-hTk" firstAttribute="leading" secondItem="vFD-P4-EFJ" secondAttribute="leadingMargin" id="9EE-mF-eL0"/>
+                                            <constraint firstItem="i8u-0J-hTk" firstAttribute="top" secondItem="vFD-P4-EFJ" secondAttribute="topMargin" id="nfK-s0-7HT"/>
+                                            <constraint firstAttribute="bottomMargin" secondItem="i8u-0J-hTk" secondAttribute="bottom" id="ycd-1G-xAC"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="intro3" id="gm2-f9-veQ">
+                                        <rect key="frame" x="770" y="0.0" width="375" height="594"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="594"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A9C-If-NgL" customClass="IntroView" customModule="room" customModuleProvider="target">
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="title" value="最新房源，一手掌握"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="subtitle" value="关键信息，一览无余"/>
+                                                        <userDefinedRuntimeAttribute type="image" keyPath="image" value="placeholder"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" secondItem="A9C-If-NgL" secondAttribute="bottom" id="3rV-a9-DpI"/>
+                                            <constraint firstItem="A9C-If-NgL" firstAttribute="top" secondItem="gm2-f9-veQ" secondAttribute="topMargin" id="QyM-Zw-w9B"/>
+                                            <constraint firstItem="A9C-If-NgL" firstAttribute="leading" secondItem="gm2-f9-veQ" secondAttribute="leadingMargin" id="RZW-DT-S7A"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="A9C-If-NgL" secondAttribute="trailing" id="ote-BN-Ta4"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="1150" height="594"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Rbc-Af-nBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-527" y="760"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="placeholder" width="3264" height="2448"/>
+    </resources>
+</document>

@@ -1,0 +1,35 @@
+/* 
+  Localizable.strings
+  room
+
+  Created by CY Lim on 22/10/16.
+  Copyright © 2016 cy.my. All rights reserved.
+*/
+
+
+// Listings Table View
+"listing" = "Listing";
+"favourite" = "Favourite";
+
+// Status for Listings
+"new" = "New";
+"trending" = "Trending";
+
+// Alert
+
+// Button
+
+// Profile View
+"add listing" = "Add Listing";
+"profile" = "Profile";
+
+// Profile Table View
+"my listings" = "My listings";
+"my messages" = "My Messages";
+"my searches" = "My Searches";
+"setting" = "Setting";
+"contact us" = "Contact Us";
+"terms" = "Terms & Conditions";
+"feedback" = "Feedback";
+"support" = "Supports";
+"logout" = "Log Out";
