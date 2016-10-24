@@ -9,25 +9,44 @@
 import UIKit
 
 private let reuseIdentifier = ["intro1","intro2","intro3"]
-
 class IntroCollectionViewController: UIViewController {
+	@IBOutlet weak var collectionView: UICollectionView!
+	
+	var delegate: IntroViewController?
+	
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-
 	
+	override func viewDidLayoutSubviews() {
+		let layout = collectionView.collectionViewLayout as? UICollectionViewFlowLayout
+		let frame = collectionView.frame
+		layout?.itemSize = CGSize(width: frame.width-10, height: frame.height)
+		layout?.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+		
+	}
 
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+	}
 }
 
 extension IntroCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource{
 	func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		// #warning Incomplete implementation, return the number of items
 		return reuseIdentifier.count
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		return collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier[indexPath.row], for: indexPath)
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier[indexPath.row], for: indexPath)
+		
+		return cell
 	}
+	
+	func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+		let page = lround(Double(collectionView.contentOffset.x / collectionView.frame.size.width))
+		
+		delegate?.turnPage(page: page)
+	}
+	
 }

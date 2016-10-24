@@ -12,7 +12,6 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
 	
 	let textAddListing = NSLocalizedString("add listing", comment: "")
 	let textProfile = NSLocalizedString("profile", comment: "")
-	let textLogOut = NSLocalizedString("logout", comment: "")
 	
 	@IBOutlet weak var profileView: UIView! {
 		didSet{
@@ -29,7 +28,6 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
 			addButton.layer.cornerRadius = 5.0
 		}
 	}
-	@IBOutlet weak var logoutButton: UIBarButtonItem!
 	@IBOutlet weak var profileImage: UIImageView! {
 		didSet{
 			profileImage.layer.masksToBounds = true
@@ -48,7 +46,6 @@ class ProfileViewController: UIViewController, UIScrollViewDelegate {
 		super.viewWillAppear(animated)
 	
 		addButton.setTitle(textAddListing, for: .normal)
-		logoutButton.title = textLogOut
 		navigationItem.title = textProfile
 	}
 	

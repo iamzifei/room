@@ -92,6 +92,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E90C2A351DBE082C00E48F2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		E94B8C391DBC76910074A142 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +204,7 @@
 		E9592A701DBB1E2C00ACF465 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				E90C2A351DBE082C00E48F2B /* Model */,
 				E9592A711DBB1E4900ACF465 /* ProfileViewController.swift */,
 				E9592A731DBB1F7800ACF465 /* ProfileTableViewController.swift */,
 			);
