@@ -152,9 +152,13 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-EY-IAl">
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGa-nb-9MI">
+                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GGa-nb-9MI">
+                                        <rect key="frame" x="0.0" y="-64" width="375" height="659"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="659" id="ChU-NA-jH5"/>
+                                        </constraints>
                                         <connections>
-                                            <segue destination="rtW-N8-z4K" kind="embed" id="mLI-H8-fds"/>
+                                            <segue destination="rtW-N8-z4K" kind="embed" identifier="settingSegue" id="mLI-H8-fds"/>
                                         </connections>
                                     </containerView>
                                 </subviews>
@@ -164,8 +168,7 @@
                                     <constraint firstItem="GGa-nb-9MI" firstAttribute="top" secondItem="lgD-EY-IAl" secondAttribute="top" id="JUQ-NM-Ufz"/>
                                     <constraint firstAttribute="bottom" secondItem="GGa-nb-9MI" secondAttribute="bottom" id="Mjp-NP-Tjd"/>
                                     <constraint firstAttribute="trailing" secondItem="GGa-nb-9MI" secondAttribute="trailing" id="ObB-Mf-38U"/>
-                                    <constraint firstItem="GGa-nb-9MI" firstAttribute="centerX" secondItem="lgD-EY-IAl" secondAttribute="centerX" id="fod-Hr-7s9"/>
-                                    <constraint firstItem="GGa-nb-9MI" firstAttribute="centerY" secondItem="lgD-EY-IAl" secondAttribute="centerY" id="teI-xF-xtT"/>
+                                    <constraint firstItem="GGa-nb-9MI" firstAttribute="centerX" secondItem="lgD-EY-IAl" secondAttribute="centerX" id="Tj3-Am-fxa"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="delegate" destination="mRP-nZ-SRI" id="E7D-lP-Pzg"/>
@@ -232,7 +235,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SWT-VU-yMi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="780" y="1030.4347826086957"/>
+            <point key="canvasLocation" x="780" y="1138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="LfM-kB-gy0">
@@ -269,10 +272,10 @@
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="listingCell" rowHeight="285" id="bOz-MR-PWe" customClass="ListingTableViewCell" customModule="room" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="1000" height="285"/>
+                                        <rect key="frame" x="0.0" y="28" width="320" height="285"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bOz-MR-PWe" id="XgE-8z-DQM">
-                                            <frame key="frameInset" width="1000" height="285"/>
+                                            <frame key="frameInset" width="320" height="285"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xuK-RD-cHp">
@@ -445,7 +448,7 @@
             <objects>
                 <tableViewController automaticallyAdjustsScrollViewInsets="NO" id="rtW-N8-z4K" customClass="ProfileTableViewController" customModule="room" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="2zv-FL-sEu">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="659"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>

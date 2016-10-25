@@ -37,8 +37,8 @@ class ProfileTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-		tableView.contentInset = UIEdgeInsets(top: 134, left: 0, bottom: 0, right: 0)
-		tableView.contentOffset = CGPoint(x: 0, y: 134)
+		tableView.contentInset = UIEdgeInsets(top: 134, left: 0, bottom: -134, right: 0)
+		tableView.contentOffset = CGPoint(x: 0, y: -134)
     }
 	
 	override func viewWillAppear(_ animated: Bool) {

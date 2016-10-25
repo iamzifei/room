@@ -38,9 +38,7 @@ extension IntroCollectionViewController: UICollectionViewDelegate, UICollectionV
 	}
 	
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier[indexPath.row], for: indexPath)
-		
-		return cell
+		return collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier[indexPath.row], for: indexPath)
 	}
 	
 	func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
