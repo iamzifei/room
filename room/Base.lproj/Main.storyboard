@@ -152,8 +152,7 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-EY-IAl">
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GGa-nb-9MI">
-                                        <rect key="frame" x="0.0" y="-64" width="375" height="659"/>
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GGa-nb-9MI">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="659" id="ChU-NA-jH5"/>
                                         </constraints>
