@@ -189,4 +189,5 @@ open class NibDesignableCollectionViewCell: UICollectionViewCell, NibDesignableP
 		super.init(coder: aDecoder)
 		self.setupNib()
 	}
+	
 }
